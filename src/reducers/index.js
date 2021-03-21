@@ -6,3 +6,10 @@ const songsReducer = () => {
     { title: 'song4', duration: '4:05' },
   ];
 };
+
+const selectedSongReducer = (selectedSong = null, action) => {
+  if (action.type === 'SONG_SELECTED') {
+    return action.payload;
+  }
+  return selectedSong;
+};
